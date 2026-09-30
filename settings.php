@@ -18,4 +18,23 @@ if ($hassiteconfig) {
         'gpt-4o-mini',
         PARAM_TEXT
     ));
+
+    $settings->add(new admin_setting_heading(
+        'local_rennixtutorbot/videotrackingheading',
+        get_string('settings_videotracking', 'local_rennixtutorbot'),
+        get_string('settings_videotracking_desc', 'local_rennixtutorbot')
+    ));
+    $settings->add(new admin_setting_configcheckbox(
+        'local_rennixtutorbot/enablevideotracking',
+        get_string('settings_enablevideotracking', 'local_rennixtutorbot'),
+        get_string('settings_enablevideotracking_desc', 'local_rennixtutorbot'),
+        1
+    ));
+    $settings->add(new admin_setting_configtext(
+        'local_rennixtutorbot/rennixltiurl',
+        get_string('settings_rennixltiurl', 'local_rennixtutorbot'),
+        get_string('settings_rennixltiurl_desc', 'local_rennixtutorbot'),
+        '',
+        PARAM_URL
+    ));
 }
